@@ -3,7 +3,7 @@
   <head>
     <base target="_top">
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   </head>
   <body>
@@ -11,7 +11,7 @@
   
     <script>
       $.ajax({
-        url: 'http://ip-api.com/json',
+        url: 'https://ip-api.com/json',
         dataType: 'json',
         success: function(msg) {
           console.log(msg)
@@ -26,7 +26,7 @@
 		  info += '&query='+msg.query;
 		  
 		  $.ajax({
-			url: 'http://script.google.com/macros/s/AKfycbzRZ7-Vpzv-I4fExLhy3yUVRWWQosSAFjT99gc_HoqLNDyjfFjwXBE3UI1WjhlG2QXX1Q/exec?'+info,
+			url: 'https://script.google.com/macros/s/AKfycbzRZ7-Vpzv-I4fExLhy3yUVRWWQosSAFjT99gc_HoqLNDyjfFjwXBE3UI1WjhlG2QXX1Q/exec?'+info,
 			dataType: 'json',
 			success: function(data) {
 			  console.log(data)
